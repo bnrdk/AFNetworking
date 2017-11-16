@@ -151,7 +151,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSURLSessionDataTask *)GET:(NSString *)URLString
                    parameters:(nullable id)parameters
                       success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-                      failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure DEPRECATED_ATTRIBUTE;
+                      failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id responseObject))failure DEPRECATED_ATTRIBUTE;
 
 
 /**
@@ -169,7 +169,7 @@ NS_ASSUME_NONNULL_BEGIN
                             parameters:(nullable id)parameters
                               progress:(nullable void (^)(NSProgress *downloadProgress))downloadProgress
                                success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-                               failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+                               failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id _Nullable responseObject))failure;
 
 /**
  Creates and runs an `NSURLSessionDataTask` with a `HEAD` request.
@@ -184,7 +184,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSURLSessionDataTask *)HEAD:(NSString *)URLString
                     parameters:(nullable id)parameters
                        success:(nullable void (^)(NSURLSessionDataTask *task))success
-                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id _Nullable responseObject))failure;
 
 /**
  Creates and runs an `NSURLSessionDataTask` with a `POST` request.
@@ -199,7 +199,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSURLSessionDataTask *)POST:(NSString *)URLString
                     parameters:(nullable id)parameters
                        success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure DEPRECATED_ATTRIBUTE;
+                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id _Nullable responseObject))failure DEPRECATED_ATTRIBUTE;
 
 /**
  Creates and runs an `NSURLSessionDataTask` with a `POST` request.
@@ -216,7 +216,7 @@ NS_ASSUME_NONNULL_BEGIN
                              parameters:(nullable id)parameters
                                progress:(nullable void (^)(NSProgress *uploadProgress))uploadProgress
                                 success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id _Nullable responseObject))failure;
 
 /**
  Creates and runs an `NSURLSessionDataTask` with a multipart `POST` request.
@@ -233,7 +233,7 @@ NS_ASSUME_NONNULL_BEGIN
                     parameters:(nullable id)parameters
      constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
                        success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure DEPRECATED_ATTRIBUTE;
+                       failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id _Nullable responseObject))failure DEPRECATED_ATTRIBUTE;
 
 /**
  Creates and runs an `NSURLSessionDataTask` with a multipart `POST` request.
@@ -252,7 +252,7 @@ NS_ASSUME_NONNULL_BEGIN
               constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
                                progress:(nullable void (^)(NSProgress *uploadProgress))uploadProgress
                                 success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id _Nullable responseObject))failure;
 
 /**
  Creates and runs an `NSURLSessionDataTask` with a `PUT` request.
@@ -267,7 +267,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSURLSessionDataTask *)PUT:(NSString *)URLString
                    parameters:(nullable id)parameters
                       success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-                      failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+                      failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id _Nullable responseObject))failure;
 
 /**
  Creates and runs an `NSURLSessionDataTask` with a `PATCH` request.
@@ -282,7 +282,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSURLSessionDataTask *)PATCH:(NSString *)URLString
                      parameters:(nullable id)parameters
                         success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-                        failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+                        failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id _Nullable responseObject))failure;
 
 /**
  Creates and runs an `NSURLSessionDataTask` with a `DELETE` request.
@@ -297,7 +297,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSURLSessionDataTask *)DELETE:(NSString *)URLString
                       parameters:(nullable id)parameters
                          success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
-                         failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+                         failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error, id _Nullable responseObject))failure;
 
 @end
 
